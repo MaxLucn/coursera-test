@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div>
-		<h1>练习元素、类和ID选择器的 html 页面</h1>
+		<h1><a href="index.html">(back to index.html)</a>练习元素、类和ID选择器的 html 页面</h1>
 
 	<p class="highlight" id="mainPoint">
 		CSS selectors are used to determine which HTML element, or set of elements, to apply the CSS declarations to. The browser uses its selector API to traverse the DOM or Document Object Model, and pick out the elements matching the selector. Now crafting a selector is a great skill to have and not only for styling using CSS. That's because a lot of JavaScript libraries out there use the browser selector API to attach behavior and data to HTML elements. Much in the same way that CSS applies style to those elements. In this lecture, we're going to talk about three different types of selectors, element, class, and id selector.
@@ -26,22 +26,37 @@
 </body>
 </html>
 	<style type="text/css">
+		/* 伪类选择器的示例 */
+		a:link, a:visited {
+			text-decoration: none;
+			background-color: gold;
+			border: 1px solid blue;
+			color: !important;
+			display: block;
+			width: 500px;
+			text-align: center;
+			margin-bottom: 1px;
+		}
+		a:hover, a:active{
+			background-color: gray;
+			color: blue;
+		}
 		/* 以 element 为选择器 */
-	p {
-		color: blue;
-	}
-/* 以 class 为选择器的测试	*/
-	.blue {
-		background-color: yellowgreen;
-	}
-/* 以 ID 为选择器的测试 */
-	#mainPoint {
-		background-color: lightyellow;
-		front-size: 20px;
-	}
-/* css 允许我们将多个选择器分组为一个 css 规则 */
-	h1, .blue {
-		color: orangered;
-		text-align: center;
-	}
+		p {
+			color: blue;
+		}
+		/* 以 class 为选择器的测试	*/
+		.blue {
+			background-color: yellowgreen;
+		}
+		/* 以 ID 为选择器的测试 */
+		#mainPoint {
+			background-color: lightyellow;
+			front-size: 20px;
+		}
+		/* css 允许我们将多个选择器分组为一个 css 规则 */
+		h1, .blue {
+			color: orangered;
+			text-align: center;
+		}
 	</style>
