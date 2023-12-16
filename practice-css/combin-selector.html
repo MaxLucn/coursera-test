@@ -6,11 +6,67 @@
 	<title>combining selector</title>
 </head>
 <body>
+	<h1>组合选择器在阅读代码的时候注意是从右往左读！</h1>
+	<h2>对 a 标签所写的 css 样式即位伪类选择器的简单示例</h2>
 	<a href="index.html">(back to index.html)</a>
+	<!-- &lt; &gt; 两个实体字符串，编码需要时用起来方便 -->
+	<p class="comb">
+		这是测试组合选择器的，需要注意的是组合选择器在使用时它们之间没有空格，且样式需要选择器中的元素都满足才会起作用，比如下面 &lt;p&gt; 标签和 &lt;class='comb'&gt; 的样式。
+	</p>
+	<article>
+		<p>
+			子选择器的使用:<br>
+				1、直接子元素：比如 (article &gt; p)注意空格，只有 article 标签的直接子元素才起作用的样式<br>
+				2、后代元素：比如 (div ul)之间有空格，只要是在 article 标签下的 p 都会用的其样式<br>
+				3、子选择器可以用于许多不同的目的:&amp;设置直接子元素的样式
+ 				&amp;将直接子元素绑定到事件&amp;将直接子元素包含在另一个容器中<br>
+			
+		</p>
+
+	</article>
+	<article>
+		<div>
+			<p>为了测试子选择器中直接子元素而创建的</p>
+		</div>
+	</article>
+	<div>
+  		<li>这段文本不是红色的</li>
+  		<li>这段文本是红色的</li>
+	</div>
 
 </body>
 </html>
 <style type="text/css">
+	h1 {
+		color: red;
+	}
+	/* 需要注意的是直接子元素选择器优先级在后代元素之后 */
+	/* 设置直接子元素的样式 */
+	article > p {
+		color: blue;
+		background-color: gray;
+	}
+	/* 将直接子元素绑定到事件:鼠标悬停在上面的时候背景色变黄	*/
+	article > p:hover {
+  		background-color: yellow;
+	}
+
+	/* 后代元素	*/
+/*	article p {
+		color: green;
+	}*/
+
+ 	/* 子选择器的使用不只有这两种还有很多种类，比如： */
+	/* 子选择器可以与其他选择器一起使用来进一步缩小选择范围。例如，以下 CSS 将设置所有 div 		元素的第一个 p 元素的文本颜色为红色 */
+	div > li:first-child {
+  		color: red;
+	}
+
+	/* 元素(element) 和 类(class) 组合	*/
+	p.comb {
+		font-size: 20px;
+		color: indianred;
+	}
 	/* 伪类选择器的示例 */
 	a:link, a:visited {
 		text-decoration: none;
