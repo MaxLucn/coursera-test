@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>elements、classes</title>
+</head>
+<body>
+	<div>
+		<h1>练习元素、类和ID选择器的 html 页面</h1>
+
+	<p class="highlight" id="mainPoint">
+		CSS selectors are used to determine which HTML element, or set of elements, to apply the CSS declarations to. The browser uses its selector API to traverse the DOM or Document Object Model, and pick out the elements matching the selector. Now crafting a selector is a great skill to have and not only for styling using CSS. That's because a lot of JavaScript libraries out there use the browser selector API to attach behavior and data to HTML elements. Much in the same way that CSS applies style to those elements. In this lecture, we're going to talk about three different types of selectors, element, class, and id selector.
+	</p>
+	<p class="blue">
+		First element selector, the element selector is just you specifying the element name. For example, in this case, p for paragraph says that every paragraph in our HTML document should be colored blue.
+	</p>
+	</div>
+	<div>
+		<p id="mainPoint">
+			As an example, if we specified p paragraph and color blue, that means every paragraph in the HTML document will have its content's text be blue. Obviously, this really doesn't affect any other elements that contain text in them. For example, we can have a div element that contains text but that text will not be affected by our CSS rule that specifies that the paragraph tag should have content text colored blue.
+		</p>
+	</div>
+
+
+</body>
+</html>
+	<style type="text/css">
+		/* 以 element 为选择器 */
+	p {
+		color: blue;
+	}
+/* 以 class 为选择器的测试	*/
+	.blue {
+		background-color: yellowgreen;
+	}
+/* 以 ID 为选择器的测试 */
+	#mainPoint {
+		background-color: lightyellow;
+		front-size: 20px;
+	}
+/* css 允许我们将多个选择器分组为一个 css 规则 */
+	h1, .blue {
+		color: orangered;
+		text-align: center;
+	}
+	</style>
