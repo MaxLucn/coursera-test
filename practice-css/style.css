@@ -1,0 +1,28 @@
+p {
+	color: darkcyan;
+}
+li {
+	font-size: 130%;
+	background-color: darkgreen;
+	color: red;
+}
+div li {
+/*	font-size: 80%;*/
+	background-color: red;
+	color: gold;
+
+}
+a:link, a:visited {
+	text-decoration: none;
+	background-color: gold;
+	border: 1px solid blue;
+	color: !important;
+	display: block;
+	width: 500px;
+	text-align: center;
+	margin-bottom: 1px;
+}
+a:hover, a:active{
+	background-color: gray;
+	color: blue;
+}
