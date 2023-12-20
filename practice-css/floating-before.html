@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>floating elements</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<a href="index.html">(back to index.html)</a>
+	<!-- 在元素上设置 position:relative; 不会使其脱离常规文档流程 -->
+	<!-- 默认情况下，除了 html 元素的所有元素的位置属性都设置为静态 -->
+	<h1>盒子模型</h1>
+	<content>在盒子模型中，垂直边距接触后会折叠，剩下较大的边距。水平边距会合并在一起</content>
+
+	<!-- 两个 div 元素之间的边距是 20px，垂直边距相碰时会坍塌，较大者获胜。 -->
+<!-- 	<div style="margin-bottom: 10px;">...</div>
+	<div style="margin-top: 20px;">...</div> -->
+
+	<h1>通过浮动定位元素</h1>
+	<div>
+		<p id='p1'></p>
+		<p id='p2'></p>
+		<p id='p3'></p>
+		<p id='p4'></p>
+		<section>
+			这是段落框之后继续的常规内容。(this is regular content continuing after the paragragh boxes.)
+		</section>
+	</div>
+
+</body>
+</html>
+<style type="text/css">
+	div	{
+		background-color: #00FFFF;
+	}
+	p {
+		width: 50px;
+		height: 50px;
+		border: 1px solid black;
+
+		float: left;
+		margin-right: 10px;
+	}
+
+	#p1 {
+		background-color: #A52A2A;
+	}
+	#p2 {
+		background-color: DEB887;
+	}
+	#p3 {
+		background-color: #5F9EA0;
+	}
+	#p4 {
+		background-color: #FF7F50;
+	}
+	/* 定义 section 内容不随 p 标签的内容的浮动而改变位置，*/
+	section {
+		clear: left;
+	}
+</style>
