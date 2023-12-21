@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>媒体查询</title>
+<style>
+
+/* 基本样式 */
+/* 如果网页的宽度小于992像素，那么段落的大小和颜色不会改变，保持基本样式。*/
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+#p1 {
+  background-color: #A52A2A;
+  width: 300px;
+  height: 300px;
+}
+#p2 {
+  background-color: #DEB887;
+  width: 50px;
+  height: 50px;
+}
+
+/* max-width 和 min-width 不应该出现重合，那样会有样式冲突，代码维护也会很麻烦。 */
+/* 如果网页的宽度大于或等于1200像素，那么棕红色的段落的宽度会变成80%，浅棕色的段落的宽度和高度会变成150像素 */
+@media (min-width: 1200px) {
+  #p1 {
+    width: 80%;
+  }
+  #p2 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+/* 如果网页的宽度在992像素和1199像素之间，那么棕红色的段落的宽度会变成50%，浅棕色的段落的宽度和高度会变成100像素，网页的背景颜色会变成蓝色。*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  #p1 {
+    width: 50%;
+  }
+  #p2 {
+    width: 100px;
+    height: 100px;
+  }
+  body {
+    background-color: blue;
+  }
+}
+
+</style>
+</head>
+<body>
+	<a href="index.html">(back to index.html)</a>
+<h1>媒体查询</h1>
+
+<p id="p1"></p>
+<p id="p2"></p>
+
+</body>
+</html>
