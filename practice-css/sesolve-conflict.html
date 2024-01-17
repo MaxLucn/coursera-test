@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>解决冲突问题</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>解决冲突问题</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<style type="text/css">
-	li {
-		color: white;
-	}
-/*	a:link, a:visited {
-		text-decoration: none;
-		background-color: gold;
-		border: 1px solid blue;
-		color: !important;
-		display: block;
-		width: 500px;
-		text-align: center;
-		margin-bottom: 1px;
-	}
-	a:hover, a:active{
-		background-color: gray;
-		color: blue;*/
+<style>
+    li {
+        color: white;
+    }
+
+    /*	a:link, a:visited {
+            text-decoration: none;
+            background-color: gold;
+            border: 1px solid blue;
+            color: darkred !important;
+            display: block;
+            width: 500px;
+            text-align: center;
+            margin-bottom: 1px;
+        }
+        a:hover, a:active{
+            background-color: gray;
+            color: blue;*/
 </style>
 <body>
-	<a href="index.html">(back to index.html)</a>
-	<div>
-		<p>将所有 css 样式放到 html 页面外部的单独文件是个好主意，因为这样可以在多个页面中共享相同的样式</p>
-	</div>
-	<div>
-		<!-- css 冲突的可能性，按上到下排序为 1、2、、、、、 -->
-		<p>当对目标指定了相同的属性且产生冲突时，原始优先规则就会生效：最后一个声明有效（由于 html 页面是从上往下的，所以很好确定哪个才是最后一个声明(origin)）</p>
-		<p>当对目标指定了不同的属性时就不存在，这时候它们的属性就会同时生效，即：声明合并(declarations Merge)</p>
-		<!-- 这里 p 标签直接指定了字体颜色所以他的颜色为黑色。然后 li 由于 css 规则中给定元素数量为多余上一个，所以它用后面的 css 样式。 -->
-		<p style="color: black;">
-		css 规则越具体优先级越高，这里的具体指的是直接指定或者给标签给定属性的情况下，它们优先级为
-		<ol>
-			<li>直接给某标签指定 style</li>
-			<li>有 ID 属性的标签</li>
-			<li>定义了 类(class)的标签</li>
-			<li>定义了伪类的标签</li>
-			<li>最后是所选组合中使用的元素数量</li>
-		</ol>
-	</p>
-	</div>
-	<!-- 这个标签里的是为了测试前两个规则冲突设置的，当第三个生效时它会失效，所以全都注释了 -->
+<a href="index.html">(back to index.html)</a>
+<div>
+    <p>将所有 css 样式放到 html 页面外部的单独文件是个好主意，因为这样可以在多个页面中共享相同的样式</p>
+</div>
+<div>
+    <!-- css 冲突的可能性，按上到下排序为 1、2、、、、、 -->
+    <p>当对目标指定了相同的属性且产生冲突时，原始优先规则就会生效：最后一个声明有效（由于 html
+        页面是从上往下的，所以很好确定哪个才是最后一个声明(origin)）</p>
+    <p>当对目标指定了不同的属性时就不存在，这时候它们的属性就会同时生效，即：声明合并(declarations Merge)</p>
+    <!-- 这里 p 标签直接指定了字体颜色所以他的颜色为黑色。然后 li 由于 css 规则中给定元素数量为多余上一个，所以它用后面的 css 样式。 -->
+    <p style="color: black;">
+        css 规则越具体优先级越高，这里的具体指的是直接指定或者给标签给定属性的情况下，它们优先级为</p>
+    <ol>
+        <li>直接给某标签指定 style</li>
+        <li>有 ID 属性的标签</li>
+        <li>定义了 类(class)的标签</li>
+        <li>定义了伪类的标签</li>
+        <li>最后是所选组合中使用的元素数量</li>
+    </ol>
+
+</div>
+<!-- 这个标签里的是为了测试前两个规则冲突设置的，当第三个生效时它会失效，所以全都注释了 -->
 <!-- 	<div>
 		<h2>示例</h2>
 		<ul>

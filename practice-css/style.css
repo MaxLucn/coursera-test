@@ -17,7 +17,7 @@ div li {
 /* 用以下样式 content 标签的宽度为 140 像素，因为： */
 /* 宽度 100px + 填充（左 10px + 右 10px ） + 边框（左 10px + 右 10px ） = 140px。
 边距并不定义方框的宽度。它只是定义了其他元素应被推开的距离 */
-content {
+em {
   padding: 10px 10px 10px 10px;
   margin: 10px 10px 10px 10px;
   width: 100px;
@@ -41,7 +41,7 @@ a:link, a:visited {
 	text-decoration: none;
 	background-color: gold;
 	border: 1px solid blue;
-	color: !important;
+	color: darkred !important;
 	display: block;
 	width: 500px;
 	text-align: center;
