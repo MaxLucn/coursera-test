@@ -113,3 +113,19 @@ for (let i = 0; i <10; i++) {
     sum += i;
 }
 console.log("从 0 加到 9 的和是：" + sum);
+
+// 处理默认值
+function orderChickenWith(sideDish) {
+    // 当调用函数不传任何参数的时候，sideDish 的值是 undefined，
+    // 所以我们可以在函数体中处理这种情况，比如这里我们给 sideDish 赋一个默认值 "whatever!"。
+    // if (sideDish === undefined) {
+    //     sideDish = "whatever!"
+    // }
+    // 这句代码的作用和上面的 if 语句是一样的，但是更简洁。
+    sideDish = sideDish || "whatever!"
+    console.log("Chicken with " + sideDish);
+}
+orderChickenWith("noodles");
+
+orderChickenWith();
+
