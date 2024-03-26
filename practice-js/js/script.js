@@ -129,3 +129,68 @@ orderChickenWith("noodles");
 
 orderChickenWith();
 
+
+// // 使用 new object（）创建对象
+// var company = new Object();
+// company.name = "Facebook";  // 添加属性
+// company.ceo = new Object(); // 添加对象
+// company.ceo.firstName = "Mark";
+// company.ceo.favColor = "blue";  // 添加属性
+// console.log(company);   // 打印对象
+// console.log("Company CEO name is: " + company.ceo.firstName);  // 访问对象的属性
+//
+//
+// //使用对象字面量创建对象
+// var company = { // 创建对象
+//     name: "facebook",   // 添加属性
+//     ceo: {        // 添加对象
+//         firstname: "Mark", // 对象中的对象
+//         favColor: "blue" // 添加属性
+//     },
+// };
+// console.log(company);  // 打印对象
+
+
+// // 函数的调用
+// function multiply(x, y) {
+//     return x * y;
+// }
+// console.log(multiply(5, 3));
+
+// 函数的调用
+function makeMultiplier(multiplier) {
+    var myFunc = function (x) {
+        return multiplier * x;
+    };
+    return myFunc;
+}
+
+var multiplyBy3 = makeMultiplier(3);
+console.log(multiplyBy3(10));
+
+// 按值传递 vs 按引用传递
+// 1. 按值传递：传递的是值的副本，原值不会改变
+// 2. 按引用传递：传递的是引用，原值会改变。对象通过引用传递，而基本类型通过值传递。
+// 按值传递和通过引用传递之间的区别在于，在按值传递时，值一旦更改，就不会影响原始变量的原始值。
+// 按值传递
+var q = 7;
+var w = q;
+console.log("q: " + q);
+console.log("w: " + w);
+
+w = 5;
+console.log("after w update:");
+console.log("q: " + q);
+console.log("w: "  + w);
+
+
+// 按引用传递
+var e = {value: 7};
+var r = e;
+console.log(e);
+console.log(r);
+
+r.value = 5;
+console.log("after r update e:");   // 5
+console.log(e);
+console.log(r);
